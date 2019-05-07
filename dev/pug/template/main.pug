@@ -1,0 +1,27 @@
+include ../utils/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset='utf-8')
+		title=title
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+		// Template Basic Images Start
+		meta(property='og:image' content='static/images/image.jpg')
+		link(rel='icon' href='static/images/favicon/favicon.ico')
+		link(rel='apple-touch-icon' sizes='180x180' href='static/images/favicon/apple-touch-icon-180x180.png')
+		// Template Basic Images End
+		// Custom Browsers Color Start
+		meta(name='theme-color' content='#0081C8')
+		// Custom Browsers Color End
+		link(rel='stylesheet' href='static/css/main.min.css')
+	body(class=pageClass)
+		include ../modules/header/header
+		.main_content
+			block content
+		include ../modules/footer/footer
+		script(src="static/js/jquery.slim.min.js")
+		script(src="static/js/libs.min.js")
+		script(src="static/js/main.js")
